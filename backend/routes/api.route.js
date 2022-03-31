@@ -11,10 +11,11 @@ var axios = require("axios");
 
 router.get("/post", async (req, res, next) => {
   try {
-    let searchinput = "elonmusk"
+    let searchinput = "elonmusk";
+    let outputnumber = 25;
     var config = {
       method: "get",
-      url: `https://api.twitter.com/2/tweets/search/recent?query=${searchinput}&max_results=25`,
+      url: `https://api.twitter.com/2/tweets/search/recent?query=${searchinput}&max_results=${outputnumber}`,
       headers: {
         Authorization:
           "Bearer AAAAAAAAAAAAAAAAAAAAAFLvawEAAAAAc2dWAZG2AqRw%2ByaF%2BOegPGKuejM%3DEBzjYb4tGIQyFz8Gt0ElBkzTEPPpGhVpmSI1D7P1bdRNkkJgCa",
